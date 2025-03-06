@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="night-mode">
     <!-- Top Menu Bar -->
     <nav class="top-menu">
         <div class="menu-toggle">
@@ -27,23 +27,29 @@
             <li><a href="#certifications" onclick="scrollToSection('certifications')">Certifications</a></li>
             <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
         </ul>
+        <div class="mode-toggle">
+            <label class="switch">
+                <input type="checkbox" id="modeSwitch" onclick="toggleMode()">
+                <span class="slider round"></span>
+            </label>
+        </div>
     </nav>
 
     <!-- Main Content -->
     <div class="main-content">
-        <!-- Hero Section with Background Image -->
+        <!-- Hero Section -->
         <section id="hero" class="hero">
             <div class="hero-content">
                 <h1>Hello, I'm <span class="highlight">Rohith Donthula</span></h1>
                 <p class="typed-text">Cybersecurity Specialist | <span id="typed"></span></p>
                 <div class="hero-buttons">
-                    <a href="resume.pdf" target="_blank" class="btn">Download CV</a>
+                    <a href="resume.pdf" target="_blank" download="Rohith_Donthula_Resume.pdf" class="btn">Download CV</a>
                     <a href="#contact" onclick="scrollToSection('contact')" class="btn">Contact Me</a>
                 </div>
             </div>
         </section>
 
-        <!-- About Section (Moved to Top) -->
+        <!-- About Section -->
         <section id="about" class="section">
             <h2>About Me</h2>
             <div class="about-content">
@@ -58,7 +64,7 @@
             </div>
         </section>
 
-        <!-- Skills Section (Side-by-Side Skills, Moved Next) -->
+        <!-- Skills Section -->
         <section id="skills" class="section skills-section">
             <h2>My Skills</h2>
             <div class="skills-container">
@@ -103,7 +109,7 @@
                     <div class="timeline-content">
                         <h3>Virtual Cybersecurity Industry Intern</h3>
                         <p class="company">Security Industry Simulated Training & Mentoring Research | Jun 2022 – Nov 2022</p>
-                        <p class=" Bremdetails">Boosted threat detection by 30% and slashed response times by 50% using IDS, firewalls, and SIEM tools. Developed and enforced security policies while conducting in-depth vulnerability assessments.</p>
+                        <p class="details">Boosted threat detection by 30% and slashed response times by 50% using IDS, firewalls, and SIEM tools. Developed and enforced security policies while conducting in-depth vulnerability assessments.</p>
                     </div>
                 </div>
                 <div class="timeline-item" onclick="toggleDetails(this)">
@@ -193,6 +199,11 @@
                 </div>
             </div>
         </section>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2025 Rohith Donthula. All rights reserved.</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

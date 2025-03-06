@@ -51,3 +51,16 @@ document.addEventListener('DOMContentLoaded', () => {
 document.getElementById('modal').addEventListener('click', function(e) {
     if (e.target === this) closeModal();
 });
+
+// Toggle Night/Day Mode
+function toggleMode() {
+    const body = document.body;
+    const modeSwitch = document.getElementById('modeSwitch');
+    if (modeSwitch.checked) {
+        body.classList.remove('night-mode');
+        body.classList.add('day-mode');
+    } else {
+        body.classList.remove('day-mode');
+        body.classList.add('night-mode');
+    }
+}
